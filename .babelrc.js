@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     ['transform-react-remove-prop-types', { mode: 'unsafe-wrap' }],
     'annotate-pure-calls',
+    'transform-decorators-legacy',
   ],
   env: { test: { presets: presets('commonjs') } },
 }

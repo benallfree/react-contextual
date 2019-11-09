@@ -1,5 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Subscribe decorator 1`] = `
+<Provider
+  message="success!"
+>
+  <RenderPure>
+    <SubscribeWrap>
+      <Test
+        message="success!"
+        setState={[Function]}
+      >
+        success!
+      </Test>
+    </SubscribeWrap>
+  </RenderPure>
+</Provider>
+`;
+
+exports[`Subscribe decorator 2`] = `
+<Provider
+  message="success!"
+>
+  <RenderPure>
+    <SubscribeWrap>
+      <Test
+        message="success!"
+        setState={[Function]}
+      >
+        success!
+      </Test>
+    </SubscribeWrap>
+  </RenderPure>
+</Provider>
+`;
+
+exports[`Subscribe decorator inheritance 1`] = `
+<Provider
+  message="success!"
+>
+  <RenderPure>
+    <B>
+      <A
+        message="success!"
+        setState={[Function]}
+      >
+        success!
+      </A>
+    </B>
+  </RenderPure>
+</Provider>
+`;
+
+exports[`Subscribe decorator inheritance 2`] = `
+<Provider
+  message="success!"
+>
+  <RenderPure>
+    <B>
+      <A
+        message="success!"
+        setState={[Function]}
+      >
+        success!
+      </A>
+    </B>
+  </RenderPure>
+</Provider>
+`;
+
 exports[`subscribe("key") 1`] = `
 <Provider
   id="key"

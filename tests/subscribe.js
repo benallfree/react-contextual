@@ -62,6 +62,43 @@ Object.entries({
   })
 )
 
+test('Subscribe decorator', async () => {
+  const store = { message: 'success!' }
+  @subscribe()
+  class Test extends React.PureComponent {
+    render() {
+      return this.props.message
+    }
+  }
+  await snapshot(
+    <Provider {...store}>
+      <Test />
+    </Provider>
+  )
+})
+
+test('Subscribe decorator inheritance', async () => {
+  const store = {
+    test: 'hello',
+  }
+
+  @subscribe()
+  class A extends React.Component {
+    render() {
+      const { test } = this.props
+      return test
+    }
+  }
+
+  class B extends A {}
+
+  await snapshot(
+    <Provider {...store}>
+      <B />
+    </Provider>
+  )
+})
+
 const store = createStore({ message: 'success!' }, 'testStore')
 Object.entries({
   'subscribe(store)': { store, to: store },
